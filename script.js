@@ -81,7 +81,7 @@ window.addEventListener('scroll', () => {
    ============================================ */
 
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-const sections = document.querySelectorAll('#hero, #work, #process, #about, #contact');
+const sections = document.querySelectorAll('#hero, #work, #process, #about, #testimonials, #contact');
 
 if (sections.length && navLinks.length) {
   const navObserver = new IntersectionObserver(
@@ -98,7 +98,7 @@ if (sections.length && navLinks.length) {
         }
       });
     },
-    { threshold: 0.3, rootMargin: '-60px 0px -40% 0px' }
+    { threshold: 0, rootMargin: '-40% 0px -55% 0px' }
   );
 
   sections.forEach((section) => navObserver.observe(section));

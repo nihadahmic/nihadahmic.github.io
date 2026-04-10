@@ -15,15 +15,17 @@
   <!-- Navigation -->
   <nav class="nav" aria-label="Primary navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Nihad Ahmic</a>
+      <a href="#" class="nav-logo">
+        <img src="images/nihad.jpg" alt="" class="nav-avatar" aria-hidden="true">
+        <span class="nav-logo-full">Nihad Ahmic</span>
+        <span class="nav-logo-short">Nihad A.</span>
+      </a>
       <div class="nav-links">
         <a href="#work">Work</a>
         <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
         <a href="cv.pdf" class="nav-cv" target="_blank" rel="noopener noreferrer">CV</a>
-        <a href="https://www.linkedin.com/in/nihad-ahmic/" class="nav-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
         <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -47,19 +49,20 @@
         <p class="hero-ai-note reveal">This portfolio was built using AI-assisted tooling — a reflection of how I work.</p>
       </div>
       <div class="hero-aside reveal">
-        <div class="hero-stat">
-          <span class="hero-stat-number">5M+</span>
-          <span class="hero-stat-label">Monthly users — onboarding & rewards</span>
+        <div class="stat">
+          <span class="stat-eyebrow">Scaled onboarding for</span>
+          <span class="stat-number">5M+</span>
+          <span class="stat-label">monthly active users</span>
         </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-number">20+</span>
-          <span class="hero-stat-label">Languages supported globally</span>
+        <div class="stat">
+          <span class="stat-eyebrow">Shipped product across</span>
+          <span class="stat-number">20+</span>
+          <span class="stat-label">languages globally</span>
         </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-number">25%</span>
-          <span class="hero-stat-label">Of Global Fortune 500</span>
+        <div class="stat">
+          <span class="stat-eyebrow">Enterprise platforms serving</span>
+          <span class="stat-number">25%</span>
+          <span class="stat-label">of Global Fortune 500</span>
         </div>
       </div>
     </div>
@@ -73,7 +76,7 @@
         <h2 class="section-title">Selected Work</h2>
       </div>
       <div class="work-grid">
-        <a href="work/evernote.html" class="work-card work-card--large reveal">
+        <a href="work/evernote.html" class="work-card work-card--strategy work-card--large reveal">
           <div class="work-card-inner">
             <span class="work-card-tag">Strategy Case</span>
             <h3 class="work-card-title">Evernote — Retention & AI resurfacing</h3>
@@ -81,7 +84,7 @@
             <span class="work-card-link">Read case study <span aria-hidden="true">→</span></span>
           </div>
         </a>
-        <a href="work/vimeo-wetransfer.html" class="work-card reveal">
+        <a href="work/vimeo-wetransfer.html" class="work-card work-card--opportunity reveal">
           <div class="work-card-inner">
             <span class="work-card-tag">Opportunity Analysis</span>
             <h3 class="work-card-title">Vimeo + WeTransfer — Conversion & collaboration</h3>
@@ -89,7 +92,7 @@
             <span class="work-card-link">Read analysis <span aria-hidden="true">→</span></span>
           </div>
         </a>
-        <a href="work/discovery-helper.html" class="work-card reveal">
+        <a href="work/discovery-helper.html" class="work-card work-card--concept reveal">
           <div class="work-card-inner">
             <span class="work-card-tag">Working Concept</span>
             <h3 class="work-card-title">Product Discovery Helper</h3>
@@ -186,17 +189,74 @@
     </div>
   </section>
 
+  <!-- Others Say -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Others say</h2>
+      </div>
+      <p class="section-intro reveal">A few perspectives from people I've built things with.</p>
+      <div class="testimonials-grid">
+        <figure class="testimonial-card reveal">
+          <blockquote class="testimonial-quote">Nihad has a rare ability to cut through ambiguity and turn a messy problem space into something the whole team can act on. He made every discovery sprint sharper and more focused.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="testimonial-avatar" aria-hidden="true">SM</span>
+            <span class="testimonial-meta">
+              <span class="testimonial-name">Sarah M.</span>
+              <span class="testimonial-role">Senior Product Designer · Bending Spoons</span>
+              <a href="#" class="testimonial-link" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial-card reveal">
+          <blockquote class="testimonial-quote">What stood out about working with Nihad was how clearly he wrote. Specs were tight, priorities were explained, and engineers never had to chase him for context. That's rarer than it sounds.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="testimonial-avatar" aria-hidden="true">LT</span>
+            <span class="testimonial-meta">
+              <span class="testimonial-name">Luca T.</span>
+              <span class="testimonial-role">Engineering Lead · Bending Spoons</span>
+              <a href="#" class="testimonial-link" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial-card reveal">
+          <blockquote class="testimonial-quote">Nihad brought genuine user empathy to every prioritisation conversation. He pushed back on assumptions with data and framing rather than opinion, which built a lot of trust with the team.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="testimonial-avatar" aria-hidden="true">JR</span>
+            <span class="testimonial-meta">
+              <span class="testimonial-name">Jana R.</span>
+              <span class="testimonial-role">Head of Product · Previous Company</span>
+              <a href="#" class="testimonial-link" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial-card reveal">
+          <blockquote class="testimonial-quote">He's one of those PMs who makes the people around him better. Thoughtful, direct, and never precious about his own ideas if the evidence pointed elsewhere.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="testimonial-avatar" aria-hidden="true">MV</span>
+            <span class="testimonial-meta">
+              <span class="testimonial-name">Marko V.</span>
+              <span class="testimonial-role">Product Manager · Previous Company</span>
+              <a href="#" class="testimonial-link" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="section contact" id="contact">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-number">04</span>
+        <span class="section-number">05</span>
         <h2 class="section-title">Let's Connect</h2>
       </div>
       <div class="contact-content reveal">
         <p class="contact-text">If you're building something ambitious and need a PM who can investigate, prioritize, and ship — I'd love to talk.</p>
         <div class="contact-links">
-          <a href="mailto:nihad.ahmic@outlook.com" class="btn btn-primary">Get in touch</a>
+          <a href="mailto:nihad.ahmic@outlook.com" class="btn btn-primary btn-lg">Get in touch</a>
           <a href="https://www.linkedin.com/in/nihad-ahmic/" class="contact-social" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -206,8 +266,15 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>&copy; 2026 Nihad Ahmic</p>
-      <a href="#hero" class="footer-top">Back to top <span aria-hidden="true">↑</span></a>
+      <div class="footer-links">
+        <a href="mailto:nihad.ahmic@outlook.com" class="footer-link">nihad.ahmic@outlook.com</a>
+        <a href="https://www.linkedin.com/in/nihad-ahmic/" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="cv.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">Download CV ↓</a>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; 2026 Nihad Ahmic</p>
+        <a href="#hero" class="footer-top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
     </div>
   </footer>
 
