@@ -140,7 +140,7 @@ button {
 }
 
 .section {
-  padding: var(--space-3xl) 0;
+  padding: 4.5rem 0;
 }
 
 @media (max-width: 768px) {
@@ -171,7 +171,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 60px;
+  min-height: 68px;
 }
 
 .nav-logo {
@@ -185,8 +185,8 @@ button {
 }
 
 .nav-avatar {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
@@ -315,7 +315,7 @@ button {
   display: flex;
   align-items: flex-start;
   padding-top: 140px;
-  padding-bottom: var(--space-3xl);
+  padding-bottom: 4.5rem;
 }
 
 .hero .container {
@@ -324,14 +324,14 @@ button {
 }
 
 .hero-label {
-  font-size: 0.8125rem;
-  font-weight: 600;
+  font-size: 0.9375rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   margin-bottom: var(--space-md);
   border-left: 2px solid var(--accent);
-  padding-left: 8px;
+  padding-left: 10px;
 }
 
 .hero-headline {
@@ -360,16 +360,6 @@ button {
   display: flex;
   gap: var(--space-sm);
   flex-wrap: wrap;
-}
-
-.hero-ai-note {
-  font-size: 12px;
-  font-family: var(--font-sans);
-  font-style: italic;
-  opacity: 0.7;
-  margin-top: 12px;
-  color: var(--text-secondary);
-  max-width: 65ch;
 }
 
 .hero-aside {
@@ -833,30 +823,33 @@ button {
 }
 
 .about-layout {
-  display: grid;
-  grid-template-columns: 35% 1fr;
-  gap: 64px;
-  align-items: start;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .about-photo {
-  background: var(--bg-subtle);
-  border-radius: 4px;
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   overflow: hidden;
+  background: var(--bg-subtle);
 }
 
 .about-photo img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
   object-position: top center;
-  border-radius: 4px;
+  border-radius: 50%;
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  min-width: 0;
 }
 
 .about-text {
@@ -890,20 +883,84 @@ button {
   text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
-  .about-layout {
-    gap: 32px;
-  }
+/* Certifications & Education */
+.certifications {
+  margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
+.certifications h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cert-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cert-badge-link {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.cert-badge-link:hover {
+  opacity: 0.8;
+  transition: opacity 0.15s ease;
+}
+
+.cert-badge {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cert-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cert-name a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cert-name a:hover {
+  color: var(--color-accent);
+}
+
+.cert-issuer {
+  font-size: 0.78rem;
+  opacity: 0.55;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
   .about-layout {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
   }
-  .about-photo img {
-    max-height: 400px;
-    width: 100%;
+  .about-photo {
+    align-self: center;
   }
 }
 
@@ -931,14 +988,15 @@ button {
 
 .testimonial-card::before {
   content: "\201C";
+  display: block;
   position: absolute;
-  top: 12px;
+  top: 18px;
   left: 20px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 4rem;
-  line-height: 1;
+  font-size: 3rem;
+  line-height: 0;
   color: var(--color-accent);
-  opacity: 0.15;
+  opacity: 0.12;
   pointer-events: none;
 }
 
@@ -949,11 +1007,12 @@ button {
 
 .testimonial-quote {
   font-family: var(--font-serif);
-  font-size: 1.0625rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   font-style: italic;
   color: var(--text-primary);
   margin-bottom: var(--space-md);
+  margin-top: var(--space-xs);
   max-width: 65ch;
 }
 
@@ -962,6 +1021,7 @@ button {
   align-items: center;
   gap: 12px;
   padding-top: var(--space-sm);
+  margin-top: var(--space-sm);
   border-top: 1px solid var(--border);
 }
 
@@ -993,8 +1053,9 @@ button {
 }
 
 .testimonial-role {
-  font-size: 0.8125rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
+  opacity: 0.55;
 }
 
 .testimonial-link {
@@ -1096,6 +1157,14 @@ button {
   display: flex;
   align-items: center;
   gap: var(--space-md);
+}
+
+.footer-built {
+  display: block;
+  font-size: 0.78rem;
+  opacity: 0.45;
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
 }
 
 .footer p {
