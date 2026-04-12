@@ -836,9 +836,10 @@ button {
   overflow: hidden;
   background: transparent;
   line-height: 0;
-  isolation: isolate;
   transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+  will-change: transform;
+  outline: 3px solid var(--bg-subtle);
+  box-shadow: 0 0 0 3px var(--bg-subtle);
 }
 
 .about-photo img {
