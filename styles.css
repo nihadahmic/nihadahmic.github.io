@@ -394,6 +394,11 @@ button {
   line-height: 1.1;
 }
 
+.stat-number--text {
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
 .stat-label {
   font-size: 0.8125rem;
   color: var(--text-secondary);
@@ -816,13 +821,18 @@ button {
 
 /* ============================================
    ABOUT
-   ============================================ */
-
+============================================ */
 .about {
   background: var(--bg-subtle);
 }
 
 .about-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about-photo-row {
   display: flex;
   align-items: flex-start;
   gap: 3rem;
@@ -834,12 +844,10 @@ button {
   height: 220px;
   border-radius: 50%;
   overflow: hidden;
-  background: transparent;
-  line-height: 0;
-  transform: translateZ(0);
-  will-change: transform;
   outline: 3px solid var(--bg-subtle);
   box-shadow: 0 0 0 3px var(--bg-subtle);
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .about-photo img {
@@ -848,68 +856,54 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  border: 0;
-  border-radius: 0;
-  background-clip: padding-box;
 }
 
-@media (max-width: 900px) {
-  .about-layout {
-    gap: 2rem;
-  }
-  .about-photo {
-    width: 180px;
-    height: 180px;
-  }
+.about-lead {
+  display: flex;
+  align-items: center;
+  min-height: 220px;
+}
+
+.about-lead .about-text {
+  font-size: 1.375rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  max-width: 45ch;
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  min-width: 0;
 }
 
 .about-text {
   font-size: 1.125rem;
   line-height: 1.75;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   max-width: 65ch;
 }
 
-.about-text:first-child {
-  color: var(--text-primary);
-  font-size: 1.25rem;
+.about-text--secondary {
+  color: var(--text-secondary);
 }
 
-.about-links {
+.about-ctas {
   display: flex;
-  flex-direction: row;
+  gap: var(--space-sm);
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
+  margin-top: var(--space-sm);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border);
 }
 
-.about-link {
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  color: var(--text-tertiary);
-  transition: color var(--duration) var(--ease);
-}
-
-.about-link:hover {
-  color: var(--text-primary);
-  text-decoration: underline;
-}
-
-/* About meta line (languages) */
 .about-meta {
   font-size: 0.8125rem;
   color: var(--text-tertiary);
   letter-spacing: 0.01em;
-  margin-top: 0.25rem;
 }
 
 /* Certifications */
@@ -1009,16 +1003,34 @@ button {
   color: var(--text-tertiary);
 }
 
+@media (max-width: 900px) {
+  .about-photo-row {
+    gap: 2rem;
+  }
+  .about-photo {
+    width: 180px;
+    height: 180px;
+  }
+  .about-lead {
+    min-height: 180px;
+  }
+}
+
 @media (max-width: 640px) {
-  .about-layout {
+  .about-photo-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-lg);
   }
   .about-photo {
     width: 160px;
     height: 160px;
     align-self: center;
+  }
+  .about-lead {
+    min-height: unset;
+  }
+  .about-lead .about-text {
+    font-size: 1.2rem;
   }
 }
 
@@ -1064,10 +1076,10 @@ button {
 }
 
 .testimonial-quote {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.05rem;
-  line-height: 1.7;
-  font-style: italic;
+  line-height: 1.75;
+  font-style: normal;
   color: var(--text-primary);
   margin-bottom: var(--space-md);
   margin-top: var(--space-xs);
@@ -1096,6 +1108,13 @@ button {
   font-weight: 600;
   letter-spacing: 0.02em;
   flex-shrink: 0;
+}
+
+.testimonial-avatar--photo {
+  object-fit: cover;
+  object-position: center top;
+  background: none;
+  border: 1px solid var(--border);
 }
 
 .testimonial-meta {
