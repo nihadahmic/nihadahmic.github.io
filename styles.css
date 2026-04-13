@@ -185,8 +185,8 @@ button {
 }
 
 .nav-avatar {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
@@ -840,8 +840,8 @@ button {
 
 .about-photo {
   flex-shrink: 0;
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   overflow: hidden;
   outline: 3px solid var(--bg-subtle);
@@ -861,7 +861,7 @@ button {
 .about-lead {
   display: flex;
   align-items: center;
-  min-height: 220px;
+  min-height: 260px;
 }
 
 .about-lead .about-text {
@@ -869,9 +869,9 @@ button {
   line-height: 1.65;
   color: var(--text-primary);
   font-family: var(--font-serif);
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
-  max-width: 45ch;
+  max-width: 55ch;
 }
 
 .about-content {
@@ -1008,11 +1008,11 @@ button {
     gap: 2rem;
   }
   .about-photo {
-    width: 180px;
-    height: 180px;
+    width: 210px;
+    height: 210px;
   }
   .about-lead {
-    min-height: 180px;
+    min-height: 210px;
   }
 }
 
@@ -1022,8 +1022,8 @@ button {
     align-items: flex-start;
   }
   .about-photo {
-    width: 160px;
-    height: 160px;
+    width: 185px;
+    height: 185px;
     align-self: center;
   }
   .about-lead {
