@@ -2,7 +2,8 @@
    ENVIRONMENT FLAG
    ============================================ */
 
-if (window.location.hostname === 'nihadahmic.com' || window.location.hostname === 'www.nihadahmic.com') {
+const isStagingOverride = new URLSearchParams(window.location.search).has('staging');
+if ((window.location.hostname === 'nihadahmic.com' || window.location.hostname === 'www.nihadahmic.com') && !isStagingOverride) {
   document.documentElement.classList.add('is-prod');
 } else if (window.location.hostname.endsWith('github.io')) {
   const robots = document.createElement('meta');
