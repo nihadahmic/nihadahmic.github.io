@@ -4,7 +4,8 @@
 
 .is-prod .nav-links a[href="#work"],
 .is-prod #work,
-.is-prod .artifacts-section {
+.is-prod .artifacts-section,
+.is-prod .hero-ctas a[href="#work"] {
   display: none !important;
 }
 
