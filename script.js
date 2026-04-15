@@ -1,4 +1,12 @@
 /* ============================================
+   ENVIRONMENT FLAG
+   ============================================ */
+
+if (window.location.hostname === 'nihadahmic.com' || window.location.hostname === 'www.nihadahmic.com') {
+  document.documentElement.classList.add('is-prod');
+}
+
+/* ============================================
    SCROLL REVEAL
    ============================================ */
 

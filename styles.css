@@ -1,4 +1,14 @@
 /* ============================================
+   PROD ENVIRONMENT (nihadahmic.com)
+   ============================================ */
+
+.is-prod .nav-links a[href="#work"],
+.is-prod #work,
+.is-prod .artifacts-section {
+  display: none !important;
+}
+
+/* ============================================
    DESIGN TOKENS
    ============================================ */
 
