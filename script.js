@@ -4,6 +4,11 @@
 
 if (window.location.hostname === 'nihadahmic.com' || window.location.hostname === 'www.nihadahmic.com') {
   document.documentElement.classList.add('is-prod');
+} else if (window.location.hostname.endsWith('github.io')) {
+  const robots = document.createElement('meta');
+  robots.name = 'robots';
+  robots.content = 'noindex, nofollow';
+  document.head.appendChild(robots);
 }
 
 /* ============================================
